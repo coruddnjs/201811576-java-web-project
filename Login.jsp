@@ -6,11 +6,30 @@
 <meta charset="UTF-8">
 	<Link href="sort.css" rel="stylesheet" type="text/css"/>
 	<title>렌트카 로그인창</title>
+	<script type="text/javascript">
+		function check(){
+			var f = document.person;
+		
+			if(f.p_id.value.length <4 || f.p_id.value.length >16)
+			{
+				alert("아이디를 입력해주세요");
+				f.p_id.focus();
+				return false;
+			}
+			if(f.p_Pw.value.length < 8)
+			{
+				alert("비밀번호를 입력해주세요");
+				f.p_Pw.focus();
+				return false;
+			}
+			else return true;
+		}
+	</script>
 </head>
 <body>
 	<h3> HOME > Login </h3>
 	<hr>
-	<form action="Sign.jsp" name=person method="get">
+	<form action="Sign2.jsp" name=person method="get" onsubmit="return check()">
 		<fieldset style="width:250px">
 			<legend> 로 그 인 </legend><p>
 				아이디 : <br>
@@ -18,11 +37,10 @@
 				비밀번호 : <br>
 				<input type="password" name="p_Pw" size="16"><br><br>
 				
-				<input type="submit" value=" 로그인 ">
 			<hr>
 			<div align="center">
-				<input type="submit" value=" 가입하기 "> &nbsp;&nbsp;
-				<input type="submit" value=" 비밀번호찾기 ">
+				<button type="button" onclick="location.href='Sign.jsp';">회원가입</button> &nbsp;&nbsp;
+				<input type="submit" value=" 로그인 ">
 			</div>
 		</fieldset>
 		<div style=float:center class="ima">
