@@ -15,6 +15,8 @@
 		String id = request.getParameter("p_id");
 		String name = request.getParameter("p_name");
 		String pw = request.getParameter("p_pw");
+		String se = request.getParameter("secret");
+		String b_se = request.getParameter("b_secret");
 		
 		String choice = request.getParameter("choice");
 		String P01 = request.getParameter("P1");
@@ -22,12 +24,9 @@
 		String P03 = request.getParameter("P3");
 		
 		String license1 = request.getParameter("license");
-		String year_p = request.getParameter("year");
-		String month_p = request.getParameter("month");
-		String day_p	= request.getParameter("day");
 	%>
-	<p> 생년월일 : <%= year_p %>.<%= month_p %>.<%= day_p %>
 	<p> 이름 : <%= name %>
+	<p> 주민번호 : <%= se %>-<%= b_se %>
 	<p> 아이디 : <%= id %>
 	<p> 비밀번호 : <%= pw %>
 	<p> 연락처 : <%= choice %> <%= P01 %>-<%= P02 %>-<%= P03 %>
