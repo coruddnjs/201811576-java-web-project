@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 	<Link href="sort.css" rel="stylesheet" type="text/css"/>
-	<title>렌트카 로그인창</title>
+	<title>렌트카 로그인 창</title>
 	<script type="text/javascript">
 		function check(){
 			var f = document.person;
@@ -27,9 +27,9 @@
 	</script>
 </head>
 <body>
-	<h3> HOME > Login </h3>
+	<h3> HOME > LOGIN </h3>
 	<hr>
-	<form action="Sign2.jsp" name=person method="get" onsubmit="return check()">
+	<form action="MENU.jsp" name=person method="get" onsubmit="return check()">
 		<fieldset style="width:250px">
 			<legend> 로 그 인 </legend><p>
 				아이디 : <br>
