@@ -12,11 +12,6 @@
 			var names = f.p_name.value;
 			var regeExpName = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 				
-			var pws = f.p_pw.value;
-			var regePw = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
-			
-			var ids = f.p_id.value;
-			var regeId = /^(?=.*[a-zA-z])(?=.*[0-9]).{8,16}$/;
 			
 			if(!regeExpName.test(names))
 				{
@@ -30,24 +25,6 @@
 				f.secret.focus();
 				return false;
 			}
-			if(f.b_secret.value=="")
-			{
-				alert("주민등록번호를 입력해주세요.");
-				f.b_secret.focus();
-				return false;
-			}
-			if(!regeId.test(ids))
-				{
-					alert("아이디는 영문자와 숫자로 조합해야함(8~16)");
-					f.p_id.focus();
-					return false;
-				}
-			if(!regePw.test(pws))
-				{
-					alert("비밀번호는 (8~16)자리 숫자 특수문자 영문 포함.");
-					f.p_pw.focus();
-					return false;
-				}
 			else return true;	
 		}
 	</script>
@@ -55,15 +32,14 @@
 <body>
 	<h3>HOME > Login > Sign up</h3>
 	<hr>
-	<form name="sign_up" action="Sign2.jsp" method="POST" onsubmit="return check()">
+	<form name="sign_up" action="insertDB.jsp" method="POST" onsubmit="return check()">
 	<fieldset style="width:500px">
 			<legend> 개인 정보 입력 </legend><p>		
 				이름 : <br>
 				<input type="text" name="p_name" size="16"><br><br>
 				
 				주민번호 : <br>
-				<input type="text" maxlength="6" size="6" name="secret" style="width:50px">-
-				<input type="password" maxlength="7" size="7" name="b_secret" style="width:50px">
+				<input type="text" maxlength="6" size="6" name="secret" style="width:50px">
 				<br><br>
 				
 				아이디 : <br>

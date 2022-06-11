@@ -10,7 +10,7 @@
 <body>
 	<h3> HOME > LOGIN > MENU </h3>
 	<hr>
-	<form action="MAIN.jsp" name=menu method="get">
+	<form  name=menu method="get">
 		<div class=left>
 			<img src="image/RENEGADE.jpg" alt=" " width="200" height="200">
 		</div>
@@ -19,10 +19,11 @@
 		</div>
 		<fieldset style="width:230px">
 			<legend>메 뉴 선 택</legend>
-			<button type="button" onclick="location.href='LOGIN.jsp';">차량 예약</button><br><br>
-			<button type="button" onclick="location.href='LOGIN.jsp';">예약 확인</button><br><br>
-			<button type="button" onclick="location.href='LOGIN.jsp';">예약 취소</button><br><br>
-			<button type="button" onclick="location.href='LOGIN.jsp';">차량 검색</button><br><br>
+			<button type="button" onclick="location.href='car_image.jsp';">차량 예약</button><br><br>
+			<button type="button" onclick="location.href='car_reservation.jsp';">예약 확인</button><br><br>
+			<button type="button" onclick="location.href='del.jsp';">예약 취소</button><br><br>
+			<button type="button" onclick="location.href='select.jsp';">차량 검색</button><br><br>
+			<button type="button" onclick="location.href='logout.jsp';">로그아웃</button><br><br>
 		</fieldset>
 		<div class=image>
 			<img src="image/benz.jpg" alt=" " width="200" height="200"> 
